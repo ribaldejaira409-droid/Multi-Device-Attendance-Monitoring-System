@@ -1,0 +1,27 @@
+{
+  "name": "multi-device-attendance-monitoring-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A multi-device attendance monitoring system with parallel batch processing.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^13.0.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "html5-qrcode": "^2.3.8",
+    "pdfkit": "^0.16.0",
+    "qrcode": "^1.5.4"
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10233f">
+    <title>Attendance Monitor</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main id="app">
+      <section id="login-view" class="login-layout">
+        <div class="login-card">
+          <div class="brand-mark">AM</div>
+          <p class="eyebrow">MULTI-DEVICE ATTENDANCE</p>
+          <h1>Welcome back</h1>
+          <p class="muted">Sign in to monitor and manage attendance.</p>
+          <form id="login-form" class="stack">
+            <label>Email<input name="email" type="email" autocomplete="username" required></label>
+            <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+            <button class="primary" type="submit">Sign in</button>
+            <p id="login-error" class="error" role="alert"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="app-view" class="hidden">
+        <header class="topbar">
+          <a class="brand" href="/">Attendance<span>Monitor</span></a>
+          <div class="account">
+            <span id="current-user"></span>
+            <button id="logout-button" class="button-quiet">Sign out</button>
+          </div>
+        </header>
+        <div class="workspace">
+          <aside class="sidebar">
+            <p class="eyebrow">WORKSPACE</p>
+            <label class="field-label" for="class-select">Class</label>
+            <select id="class-select"><option value="">Select a class</option></select>
+            <nav id="navigation"></nav>
+          </aside>
+          <section class="content">
+            <div id="notice" class="notice hidden" role="status"></div>
+            <div id="page-content"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="/vendor/html5-qrcode/html5-qrcode.min.js"></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
